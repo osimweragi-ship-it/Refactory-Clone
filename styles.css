@@ -40,10 +40,17 @@ body {
   font-size: 1.8rem;
   font-weight: bold;
   color: #2c3e50;
+  display: flex;
+  align-items: center;
 }
 
 .logo span {
   color: #e67e22;
+}
+
+.logo-img {
+  margin-right: 10px;
+  height: 50px;
 }
 
 .nav a {
@@ -75,7 +82,7 @@ body {
 
 .hero-inner h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .hero-inner p {
@@ -109,11 +116,12 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -158,6 +166,32 @@ body {
   text-align: center;
 }
 
+/* --- BUTTON STYLING --- */
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e67e22;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #cf711f;
+}
+
+.link {
+  text-decoration: none;
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 900px) {
   .features {
@@ -168,5 +202,9 @@ body {
   }
   .hero-inner h1 {
     font-size: 2rem;
+  }
+  .logo {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
